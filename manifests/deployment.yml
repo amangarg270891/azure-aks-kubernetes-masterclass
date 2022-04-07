@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: amangargazureakskubernetesmasterclass 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amangargazureakskubernetesmasterclass
+  template:
+    metadata:
+      labels:
+        app: amangargazureakskubernetesmasterclass 
+    spec:
+      containers:
+        - name: amangargazureakskubernetesmasterclass 
+          image: testgargacr.azurecr.io/amangargazureakskubernetesmasterclass
+          ports:
+          - containerPort: 80
